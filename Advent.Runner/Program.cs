@@ -1,5 +1,6 @@
 ﻿using Advent.Core;
 using Advent.Core.Problem1;
+using Advent.Core.Problem2;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,7 +14,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-           
+            Problems.Problem2();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -39,7 +40,13 @@ namespace Advent.Runner
 
         public static void Problem2()
         {
+            var keypad = new DiamondKeypadBuilder().Build("5");
 
+            var finder = new BathroomCodeFinder();
+
+            var code = finder.Code(keypad, () => InstructionReader.FromFile("P2.txt"));
+
+            Console.WriteLine("Code = {0}", code);
         }
     }
 }

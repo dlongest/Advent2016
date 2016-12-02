@@ -44,6 +44,12 @@
     <Compile Include="Problem1\Gps.cs" />
     <Compile Include="Problem1\Turn.cs" />
     <Compile Include="Problem1\TurnReader.cs" />
+    <Compile Include="Problem2\BathroomCodeFinder.cs" />
+    <Compile Include="Problem2\DiamondKeypadBuilder.cs" />
+    <Compile Include="Problem2\InstructionReader.cs" />
+    <Compile Include="Problem2\Key.cs" />
+    <Compile Include="Problem2\Keypad.cs" />
+    <Compile Include="Problem2\NineButtonSquareKeypadBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
