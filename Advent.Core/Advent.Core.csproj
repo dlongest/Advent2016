@@ -50,8 +50,10 @@
     <Compile Include="Problem2\Key.cs" />
     <Compile Include="Problem2\Keypad.cs" />
     <Compile Include="Problem2\NineButtonSquareKeypadBuilder.cs" />
+    <Compile Include="Problem3\TriangleEvaluator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
