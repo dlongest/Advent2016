@@ -51,6 +51,10 @@
     <Compile Include="Problem2\Keypad.cs" />
     <Compile Include="Problem2\NineButtonSquareKeypadBuilder.cs" />
     <Compile Include="Problem3\TriangleEvaluator.cs" />
+    <Compile Include="Problem4\IRoomNameDecryptor.cs" />
+    <Compile Include="Problem4\RoomName.cs" />
+    <Compile Include="Problem4\RoomManager.cs" />
+    <Compile Include="Problem4\ShiftDecryptor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -2,6 +2,7 @@
 using Advent.Core.Problem1;
 using Advent.Core.Problem2;
 using Advent.Core.Problem3;
+using Advent.Core.Problem4;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,7 +16,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem3();
+            Problems.Problem4();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -55,6 +56,21 @@ namespace Advent.Runner
             var count = new ColumnBasedTriangleEvaluator().HowManyValid("P3.txt");
 
             Console.WriteLine("Number Valid = {0}", count);
+        }
+
+        public static void Problem4()
+        {
+            var decryptor = new ShiftDecryptor();
+
+            var rooms = RoomManager.FromFile("P4.txt");
+
+            foreach (var room in rooms.Where(a => a.IsReal()))
+            {
+                var decryptedName = decryptor.Decrypt(room);
+                
+                if (decryptedName == "northpole object storage")
+                    Console.WriteLine(string.Format("{0} ===> {1}", room.FullName, decryptedName));               
+            }
         }
     }
 }
