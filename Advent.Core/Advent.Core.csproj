@@ -55,6 +55,13 @@
     <Compile Include="Problem4\RoomName.cs" />
     <Compile Include="Problem4\RoomManager.cs" />
     <Compile Include="Problem4\ShiftDecryptor.cs" />
+    <Compile Include="Problem5\ISequenceGenerator.cs" />
+    <Compile Include="Problem5\Md5Hash.cs" />
+    <Compile Include="Problem5\PasswordFinder.cs" />
+    <Compile Include="Problem5\PasswordPrefixValidator.cs" />
+    <Compile Include="Problem5\IPasswordValidator.cs" />
+    <Compile Include="Problem5\ResumableIntSequenceGenerator.cs" />
+    <Compile Include="Problem5\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

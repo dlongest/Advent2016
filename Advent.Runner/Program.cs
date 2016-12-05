@@ -3,6 +3,7 @@ using Advent.Core.Problem1;
 using Advent.Core.Problem2;
 using Advent.Core.Problem3;
 using Advent.Core.Problem4;
+using Advent.Core.Problem5;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,7 +17,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem4();
+            Problems.Problem5();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -71,6 +72,16 @@ namespace Advent.Runner
                 if (decryptedName == "northpole object storage")
                     Console.WriteLine(string.Format("{0} ===> {1}", room.FullName, decryptedName));               
             }
+        }
+
+        public static void Problem5()
+        {
+            var finder = new PasswordFinder(new PasswordPrefixValidator("00000"), 
+                                            new ResumableIntSequenceGenerator());
+
+            var password = finder.Find("ugkcyxxp", 8);
+
+            Console.WriteLine("Password = {0}", password);
         }
     }
 }
