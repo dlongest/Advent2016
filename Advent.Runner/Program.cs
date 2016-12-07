@@ -4,6 +4,7 @@ using Advent.Core.Problem2;
 using Advent.Core.Problem3;
 using Advent.Core.Problem4;
 using Advent.Core.Problem5;
+using Advent.Core.Problem6;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,7 +18,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem5();
+            Problems.Problem6();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -82,6 +83,13 @@ namespace Advent.Runner
             var password = finder.Find("ugkcyxxp", 8);
 
             Console.WriteLine("Password = {0}", password);
+        }
+
+        public static void Problem6()
+        {
+            var s = LetterFrequency.StringifyLeastFrequent(() => FileStringReader.Read("P6.txt"));
+
+            Console.WriteLine("Frequented string = {0}", s);
         }
     }
 }

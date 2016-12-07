@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileStringReader.cs" />
     <Compile Include="Problem1\Coordinate.cs" />
     <Compile Include="Problem1\Gps.cs" />
     <Compile Include="Problem1\Turn.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Problem5\IPasswordValidator.cs" />
     <Compile Include="Problem5\ResumableIntSequenceGenerator.cs" />
     <Compile Include="Problem5\StringExtensions.cs" />
+    <Compile Include="Problem6\LetterFrequency.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
