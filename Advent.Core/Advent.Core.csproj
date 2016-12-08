@@ -64,6 +64,8 @@
     <Compile Include="Problem5\ResumableIntSequenceGenerator.cs" />
     <Compile Include="Problem5\StringExtensions.cs" />
     <Compile Include="Problem6\LetterFrequency.cs" />
+    <Compile Include="Problem7\IPv7.cs" />
+    <Compile Include="Problem7\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

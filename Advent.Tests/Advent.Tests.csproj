@@ -69,6 +69,8 @@
     <Compile Include="Problem5\PasswordFinderTests.cs" />
     <Compile Include="Problem5\ResumableIntSequenceGeneratorTests.cs" />
     <Compile Include="Problem6\ExtensionsTests.cs" />
+    <Compile Include="Problem7\Ipv7Tests.cs" />
+    <Compile Include="Problem7\StringExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
