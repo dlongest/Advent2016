@@ -44,5 +44,23 @@ namespace Advent.Core.Problem8
         {
             return CreateRectangleCoordinates().Select(b => new Pixel(b, isOn: true)).ToArray();
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return false;
+
+            var command = obj as TurnOnPixelsInRectangleCommand;
+
+            if (command == null)
+                return false;
+
+            return command.RectangleHeight == this.RectangleHeight && command.RectangleWidth == this.RectangleWidth;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.RectangleWidth.GetHashCode() + 3 * this.RectangleHeight.GetHashCode();
+        }
     }
 }

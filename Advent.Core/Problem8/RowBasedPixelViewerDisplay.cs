@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Advent.Core.Problem8
 {
-    public class PixelViewerDisplay
+    public class RowBasedPixelViewerDisplay
     {
         private readonly IPixelViewer viewer;
         private readonly Action<string> output;
 
-        public PixelViewerDisplay(IPixelViewer viewer, Action<string> output)
+        public RowBasedPixelViewerDisplay(IPixelViewer viewer, Action<string> output)
         {
             this.viewer = viewer;
             this.output = output;
@@ -21,9 +21,8 @@ namespace Advent.Core.Problem8
         {
             foreach (var row in this.viewer.Rows)
             {
-                row.Select(a => a.ToString()).ToList().ForEach(a => output(a));
+                this.output(row.AsString());                
             }
         }
-
     }
 }

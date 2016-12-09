@@ -69,7 +69,8 @@
     <Compile Include="Problem8\IPixelViewer.cs" />
     <Compile Include="Problem8\IPixelViewerCommand.cs" />
     <Compile Include="Problem8\PixelExtensions.cs" />
-    <Compile Include="Problem8\PixelViewerDisplay.cs" />
+    <Compile Include="Problem8\RowBasedPixelViewerDisplay.cs" />
+    <Compile Include="Problem8\PixelViewerDriver.cs" />
     <Compile Include="Problem8\RotateColumnCommand.cs" />
     <Compile Include="Problem8\RotateRowCommand.cs" />
     <Compile Include="Problem8\Screen.cs" />

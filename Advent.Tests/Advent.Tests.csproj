@@ -81,6 +81,7 @@
     <Compile Include="Problem7\StringExtensionsTests.cs" />
     <Compile Include="Problem8\PixelExtensionsTests.cs" />
     <Compile Include="Problem8\PixelTests.cs" />
+    <Compile Include="Problem8\PixelViewerCommandFactoryTests.cs" />
     <Compile Include="Problem8\ScreenTests.cs" />
     <Compile Include="Problem8\ViewerCommandTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

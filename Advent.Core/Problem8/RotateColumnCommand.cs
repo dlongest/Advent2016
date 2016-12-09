@@ -27,5 +27,23 @@ namespace Advent.Core.Problem8
 
             viewer.Update(newPixels.ToArray());
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return false;
+
+            var command = obj as RotateColumnCommand;
+
+            if (command == null)
+                return false;
+
+            return command.ColumnIndex == this.ColumnIndex && command.ShiftPixelsDown == this.ShiftPixelsDown;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.ColumnIndex.GetHashCode() + 3 * this.ShiftPixelsDown.GetHashCode();
+        }
     }
 }

@@ -26,6 +26,24 @@ namespace Advent.Core.Problem8
 
             viewer.Update(newPixels.ToArray());
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return false;
+
+            var command = obj as RotateRowCommand;
+
+            if (command == null)
+                return false;
+
+            return command.RowIndex == this.RowIndex && command.ShiftPixelsRight == this.ShiftPixelsRight;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.RowIndex.GetHashCode() + 3 * this.ShiftPixelsRight.GetHashCode();
+        }
     }
 
     public abstract class RotateCommand : IPixelViewerCommand

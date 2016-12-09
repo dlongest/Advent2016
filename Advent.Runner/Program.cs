@@ -6,6 +6,7 @@ using Advent.Core.Problem4;
 using Advent.Core.Problem5;
 using Advent.Core.Problem6;
 using Advent.Core.Problem7;
+using Advent.Core.Problem8;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,7 +20,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem7();
+            Problems.Problem8();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -101,6 +102,23 @@ namespace Advent.Runner
                                               .Count();
 
             Console.WriteLine("How Many Support SSL?  {0}", supportsSSL);         
+        }
+
+        public static void Problem8()
+        {
+            var screen = new Screen();
+
+            var commands = new PixelViewerCommandFactory().Create(() => FileStringReader.Read("P8.txt"));
+
+            commands.Process(screen);
+
+            var display = new RowBasedPixelViewerDisplay(screen, s => Console.WriteLine(s));
+
+            display.Refresh();
+
+            var on = screen.Rows.Select(a => a.Count(b => b.IsOn)).Sum();
+
+            Console.WriteLine("\nNumber On = {0}", on);
         }
     }
 }
