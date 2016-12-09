@@ -66,6 +66,15 @@
     <Compile Include="Problem6\LetterFrequency.cs" />
     <Compile Include="Problem7\IPv7.cs" />
     <Compile Include="Problem7\StringExtensions.cs" />
+    <Compile Include="Problem8\IPixelViewer.cs" />
+    <Compile Include="Problem8\IPixelViewerCommand.cs" />
+    <Compile Include="Problem8\PixelExtensions.cs" />
+    <Compile Include="Problem8\PixelViewerDisplay.cs" />
+    <Compile Include="Problem8\RotateColumnCommand.cs" />
+    <Compile Include="Problem8\RotateRowCommand.cs" />
+    <Compile Include="Problem8\Screen.cs" />
+    <Compile Include="Problem8\Pixel.cs" />
+    <Compile Include="Problem8\TurnOnPixelsInRectangleCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
