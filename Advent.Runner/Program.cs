@@ -7,6 +7,7 @@ using Advent.Core.Problem5;
 using Advent.Core.Problem6;
 using Advent.Core.Problem7;
 using Advent.Core.Problem8;
+using Advent.Core.Problem9;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,7 +21,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem8();
+            Problems.Problem9();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -119,6 +120,17 @@ namespace Advent.Runner
             var on = screen.Rows.Select(a => a.Count(b => b.IsOn)).Sum();
 
             Console.WriteLine("\nNumber On = {0}", on);
+        }
+
+        public static void Problem9()
+        {
+            var strings = FileStringReader.Read("P9.txt");
+
+            var d = new StringDecompressorV2();
+
+            var lengths = strings.Select(a => d.Decompress(a));
+
+            lengths.ToList().ForEach(s => Console.WriteLine("Length = {0}", s));
         }
     }
 }

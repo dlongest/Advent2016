@@ -76,6 +76,8 @@
     <Compile Include="Problem8\Screen.cs" />
     <Compile Include="Problem8\Pixel.cs" />
     <Compile Include="Problem8\TurnOnPixelsInRectangleCommand.cs" />
+    <Compile Include="Problem9\StringDecompressor.cs" />
+    <Compile Include="Problem9\StringDecompressorV2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

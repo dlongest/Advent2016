@@ -84,6 +84,8 @@
     <Compile Include="Problem8\PixelViewerCommandFactoryTests.cs" />
     <Compile Include="Problem8\ScreenTests.cs" />
     <Compile Include="Problem8\ViewerCommandTests.cs" />
+    <Compile Include="Problem9\StringDecompressorTests.cs" />
+    <Compile Include="Problem9\StringDecompressorV2Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
