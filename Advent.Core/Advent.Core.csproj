@@ -41,6 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileStringReader.cs" />
+    <Compile Include="Problem10\Factory.cs" />
+    <Compile Include="Problem10\Foreman.cs" />
+    <Compile Include="Problem10\IInstructable.cs" />
+    <Compile Include="Problem10\IInstructionExecutor.cs" />
+    <Compile Include="Problem10\LoadBotInstruction.cs" />
+    <Compile Include="Problem10\LoadBotInstructionExecutor.cs" />
+    <Compile Include="Problem10\MoveChipInstruction.cs" />
+    <Compile Include="Problem10\MoveChipInstructionBuilder.cs" />
+    <Compile Include="Problem10\MoveChipsInstructionExecutor.cs" />
     <Compile Include="Problem1\Coordinate.cs" />
     <Compile Include="Problem1\Gps.cs" />
     <Compile Include="Problem1\Turn.cs" />
