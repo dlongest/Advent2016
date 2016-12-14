@@ -25,7 +25,7 @@ namespace Advent.Core.Problem12
         private Regex copyValuePattern = new Regex(@"cpy \d+ [abcd]");
         private Regex copyRegisterPattern = new Regex(@"cpy [abcd] [abcd]");
         private Regex incrementPattern = new Regex(@"inc [abcd]");
-        private Regex decrementPattern = new Regex(@"dec [abcd]");
+        private Regex decrementPattern = new Regex(@"dec [abcd]");        
         private int initialAddress;
 
         public InstructionProcessor(CPU cpu)
@@ -86,6 +86,10 @@ namespace Advent.Core.Problem12
                 else if (IsCopyValueInstruction(instruction.Value))
                 {
                     ProcessCopyValueInstruction(instruction.Value);
+                }
+                else if (IsAddValueInstruction(instruction.Value))
+                {
+                    ProcessAddValueInstruction(instruction.Value);
                 }
 
                 afterExecute(address, GetCurrentRegisterValues());
@@ -151,6 +155,11 @@ namespace Advent.Core.Problem12
             return this.decrementPattern.IsMatch(instruction);
         }
 
+        private bool IsAddValueInstruction(string instruction)
+        {
+            return instruction.StartsWith("add");
+        }
+
         private void ProcessIncrementInstruction(string instruction)
         {
             var arguments = ParseUnaryCommand(instruction);
@@ -189,6 +198,18 @@ namespace Advent.Core.Problem12
             var sourceValue = this.cpu.Register(source);
 
             this.cpu.CopyValueIntoRegister(sourceValue, target);
+        }
+
+        private void ProcessAddValueInstruction(string instruction)
+        {
+            var arguments = ParseBinaryCommand(instruction);
+
+            var sourceRegister = arguments.Item2;
+            var targetRegister = arguments.Item3;
+
+            var sourceValue = this.cpu.Register(sourceRegister);
+            
+            this.cpu.AddValueToRegister(sourceValue, targetRegister);
         }
 
 

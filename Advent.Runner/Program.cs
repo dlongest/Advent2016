@@ -179,41 +179,94 @@ namespace Advent.Runner
 
         public static void Problem12()
         {
-            var instructions = new[]
+            int a = 1;
+            int b = 1;
+            int d = 26;
+            int c = 1;
+
+            c = 7;
+            while (c != 0)
             {
-                "cpy 41 a", "inc a", "inc a", "dec a", "jnz a 2", "dec a"
-            };
+                ++d;
+                --c;
+            }
 
-            var realInstructions = FileStringReader.Read("P12.txt");
-
-            var cpu = new CPU();
-
-            var processor = new InstructionProcessor(cpu, new InitialState
+            while (d != 0)
             {
-                Address = 12,
-                Registers = new Dictionary<string, int>()
-                 {
-                     { "a", 541804 }, { "b", 290236 }, { "c", 514229 }, { "d", 6 }
-                 }
-            });
+                c = a;
 
-            //processor.Process(realInstructions);
-
-            Console.WriteLine("ADDR:\ta\tb\tc\td");
-            Console.WriteLine("---------------------------------");
-
-            int i = 0;
-
-            processor.Process(realInstructions,
-                (address, dict) =>
+                while (b != 0)
                 {
-                    if (++i == 1000)
-                    {
-                        dict.PrintDictionary(address);
-                        i = 0;
-                    }
-                });
+                    ++a;
+                    --b;
+                }
+                b = c;
+                --d;
 
+            } 
+
+            c = 19;
+            
+            while (c != 0)
+            {
+                d = 14;
+                while (d != 0)
+                {
+                    a++;
+
+                    d--;
+
+                }
+                --c;
+            }
+
+
+            Console.WriteLine("\nFinal Register State\n------------------------------------");
+           
+              Console.WriteLine("Register {0} == {1}", "a", a);
+            Console.WriteLine("Register {0} == {1}", "b", b);
+            Console.WriteLine("Register {0} == {1}", "c", c);
+            Console.WriteLine("Register {0} == {1}", "d", d);
+
+
+
+            //var instructions = new[]
+            //{
+            //    "cpy 41 a", "inc a", "inc a", "dec a", "jnz a 2", "dec a"
+            //};
+
+            //var realInstructions = FileStringReader.Read("P12_2.txt");
+
+            //var cpu = new CPU();
+
+            //var preservedPart2State = new InitialState
+            //{
+            //    Address = 11,
+            //    Registers = new Dictionary<string, int>()
+            //     {
+            //         { "a", 566471  }, { "b", 265570 }, { "c", 514229 }, { "d", 6 }
+            //     }
+            //};
+
+            //var processor = new InstructionProcessor(cpu); //, preservedPart2State);
+
+            //Console.WriteLine("ADDR:\ta\tb\tc\td");
+            //Console.WriteLine("---------------------------------");
+
+            //int i = 0;
+
+            //processor.Process(realInstructions,
+            //    (address, dict) =>
+            //    {
+            //        //if (++i == 10000)
+            //        if (true)
+            //        {
+            //            dict.PrintDictionary(address);
+            //            i = 0;                       
+            //        }
+            //    });
+
+            //Console.WriteLine("\nFinal Register State\n------------------------------------");
             //foreach (var register in cpu.Registers)
             //{
             //    Console.WriteLine("Register {0} == {1}", register, cpu.Register(register));

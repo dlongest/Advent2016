@@ -9,9 +9,8 @@ namespace Advent.Core.Problem12
 {
     public class CPU
     {
-
         private IDictionary<string, int> registers = new Dictionary<string, int>()
-        { { "a", 0 }, { "b", 0 }, { "c", 1 }, { "d", 0 } };
+        { { "a", 0 }, { "b", 0 }, { "c", 0 }, { "d", 0 } };
 
         public IEnumerable<string> Registers {  get { return this.registers.Keys;  } }
 
@@ -32,6 +31,11 @@ namespace Advent.Core.Problem12
         public void CopyValueIntoRegister(int value, string register)
         {
             this.registers[register] = value;
+        }
+
+        public void AddValueToRegister(int value, string register)
+        {
+            this.registers[register] += value;
         }
     }
         
