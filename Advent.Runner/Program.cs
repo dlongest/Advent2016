@@ -1,6 +1,7 @@
 ﻿using Advent.Core;
 using Advent.Core.Problem1;
 using Advent.Core.Problem10;
+using Advent.Core.Problem12;
 using Advent.Core.Problem2;
 using Advent.Core.Problem3;
 using Advent.Core.Problem4;
@@ -22,7 +23,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem10();
+            Problems.Problem12();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -175,6 +176,50 @@ namespace Advent.Runner
                 Console.WriteLine("Bin {0} contains values [{1}]", bin, factory.OutputBinValues(bin).Format());
             }
         }
+
+        public static void Problem12()
+        {
+            var instructions = new[]
+            {
+                "cpy 41 a", "inc a", "inc a", "dec a", "jnz a 2", "dec a"
+            };
+
+            var realInstructions = FileStringReader.Read("P12.txt");
+
+            var cpu = new CPU();
+
+            var processor = new InstructionProcessor(cpu, new InitialState
+            {
+                Address = 12,
+                Registers = new Dictionary<string, int>()
+                 {
+                     { "a", 541804 }, { "b", 290236 }, { "c", 514229 }, { "d", 6 }
+                 }
+            });
+
+            //processor.Process(realInstructions);
+
+            Console.WriteLine("ADDR:\ta\tb\tc\td");
+            Console.WriteLine("---------------------------------");
+
+            int i = 0;
+
+            processor.Process(realInstructions,
+                (address, dict) =>
+                {
+                    if (++i == 1000)
+                    {
+                        dict.PrintDictionary(address);
+                        i = 0;
+                    }
+                });
+
+            //foreach (var register in cpu.Registers)
+            //{
+            //    Console.WriteLine("Register {0} == {1}", register, cpu.Register(register));
+            //}
+
+        }
     }
 
     public static class ArrayPrintExtensions
@@ -184,6 +229,15 @@ namespace Advent.Runner
             var s = string.Join("", values);
 
             return s;
+        }
+
+        public static void PrintDictionary(this IDictionary<string, int> dict, int address)
+        {
+            var dictValues = string.Join("\t", dict.Keys.OrderBy(a => a).Select(a => dict[a]));
+
+            var output = string.Format("{0}\t{1}", address, dictValues);
+
+            Console.WriteLine(output);
         }
     }
 }
