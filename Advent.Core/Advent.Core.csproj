@@ -52,6 +52,9 @@
     <Compile Include="Problem10\MoveChipsInstructionExecutor.cs" />
     <Compile Include="Problem12\CPU.cs" />
     <Compile Include="Problem12\InstructionProcessor.cs" />
+    <Compile Include="Problem14\KeyGenerator.cs" />
+    <Compile Include="Problem14\Md5Hash.cs" />
+    <Compile Include="Problem14\StringExtensions.cs" />
     <Compile Include="Problem1\Coordinate.cs" />
     <Compile Include="Problem1\Gps.cs" />
     <Compile Include="Problem1\Turn.cs" />

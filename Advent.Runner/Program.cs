@@ -2,6 +2,7 @@
 using Advent.Core.Problem1;
 using Advent.Core.Problem10;
 using Advent.Core.Problem12;
+using Advent.Core.Problem14;
 using Advent.Core.Problem2;
 using Advent.Core.Problem3;
 using Advent.Core.Problem4;
@@ -23,7 +24,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem12();
+            Problems.Problem14();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -272,6 +273,19 @@ namespace Advent.Runner
             //    Console.WriteLine("Register {0} == {1}", register, cpu.Register(register));
             //}
 
+        }
+
+        public static void Problem14()
+        {
+            var salt = "ahsbgdzn";
+
+            var keys = new StretchedKeyFinder(2016).Find(salt);
+
+            foreach (var index in Enumerable.Range(0, keys.Count()))
+            {
+                Console.WriteLine("key[{0}] = {1}", index, keys[index]);
+            }
+            
         }
     }
 

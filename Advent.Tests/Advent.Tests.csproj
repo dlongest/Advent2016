@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Problem10\FactoryTests.cs" />
+    <Compile Include="Problem14\ExtensionsTests.cs" />
+    <Compile Include="Problem14\KeyFinderTests.cs" />
     <Compile Include="Problem1\CoordinateTests.cs" />
     <Compile Include="Problem1\GpsTests.cs" />
     <Compile Include="Problem2\BathroomCodeFinderTests.cs" />
