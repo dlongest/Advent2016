@@ -3,6 +3,7 @@ using Advent.Core.Problem1;
 using Advent.Core.Problem10;
 using Advent.Core.Problem12;
 using Advent.Core.Problem14;
+using Advent.Core.Problem15;
 using Advent.Core.Problem2;
 using Advent.Core.Problem3;
 using Advent.Core.Problem4;
@@ -24,7 +25,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem14();
+            Problems.Problem15();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -286,6 +287,17 @@ namespace Advent.Runner
                 Console.WriteLine("key[{0}] = {1}", index, keys[index]);
             }
             
+        }
+
+        public static void Problem15()
+        {
+            var discs = DiscFactory.CreatePart2();
+
+            var optimizer = new TimeOptimizer(discs.ToArray());
+
+            var time = optimizer.FindOptimalTime();
+
+            Console.WriteLine("Optimal Time = {0}", time);
         }
     }
 

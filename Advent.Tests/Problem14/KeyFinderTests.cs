@@ -93,7 +93,7 @@ namespace Advent.Tests.Problem14
 
     public class ParallelizingKeyFinderTests
     {
-        [Fact]
+        //[Fact]
         public void CorrectlyFindsFirstKey_UsingStandardFinder()
         {
             var sut = new ParallelizingKeyFinder(new KeyFinder());
@@ -104,7 +104,7 @@ namespace Advent.Tests.Problem14
             Assert.Equal(39, actual[0]);
         }
 
-        [Fact]
+        //[Fact]
         public void CorrectlyFindsLastKey()
         {
             var sut = new ParallelizingKeyFinder(new KeyFinder());
@@ -114,7 +114,7 @@ namespace Advent.Tests.Problem14
             Assert.Equal(22728, keys[63]);
         }
 
-        [Fact]
+        //[Fact]
         public void CorrectlyFindsLastStretchedKey()
         {
             var sut = new ParallelizingKeyFinder(new StretchedKeyFinder(2016));

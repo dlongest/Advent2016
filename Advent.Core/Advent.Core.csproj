@@ -55,6 +55,9 @@
     <Compile Include="Problem14\KeyGenerator.cs" />
     <Compile Include="Problem14\Md5Hash.cs" />
     <Compile Include="Problem14\StringExtensions.cs" />
+    <Compile Include="Problem15\Disc.cs" />
+    <Compile Include="Problem15\DiscFactory.cs" />
+    <Compile Include="Problem15\TimeOptimizer.cs" />
     <Compile Include="Problem1\Coordinate.cs" />
     <Compile Include="Problem1\Gps.cs" />
     <Compile Include="Problem1\Turn.cs" />
