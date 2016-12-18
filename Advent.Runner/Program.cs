@@ -2,6 +2,7 @@
 using Advent.Core.Problem1;
 using Advent.Core.Problem10;
 using Advent.Core.Problem12;
+using Advent.Core.Problem13;
 using Advent.Core.Problem14;
 using Advent.Core.Problem15;
 using Advent.Core.Problem16;
@@ -26,7 +27,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem16();
+            Problems.Problem13();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -277,6 +278,29 @@ namespace Advent.Runner
 
         }
 
+        public static void Problem13()
+        {
+            var maze = Maze.Create(50, 50, 1352);
+
+            var self = maze.FindOptimalRoute(new MazeCoordinate(1, 1), new MazeCoordinate(1, 1));
+
+            var paths = maze.StepsToAllSpaces(new MazeCoordinate(1, 1));
+
+            var existingPaths = paths.Where(kvp => kvp.Value != Advent.Core.Problem13.Path.Empty);
+
+            Console.WriteLine("Paths <= Length 50 = {0}", existingPaths.Count(kvp => kvp.Value.Length <= 50));            
+            
+            var header = string.Join("", Enumerable.Range(0, 50)
+                                                   .Select(a => a % 10 == 0 ? a / 10 : a % 10));
+
+            Console.WriteLine(header);
+
+            foreach (var row in maze.AsRowGrid(s => s ? "." : "#"))
+            {
+                Console.WriteLine(string.Join("", row));
+            }
+        }
+
         public static void Problem14()
         {
             var salt = "ahsbgdzn";
@@ -327,6 +351,15 @@ namespace Advent.Runner
             var output = string.Format("{0}\t{1}", address, dictValues);
 
             Console.WriteLine(output);
+        }
+
+        public static void PrintRoute(this IEnumerable<MazeCoordinate> coordinates)
+        {
+            Console.WriteLine("Route has {0} steps", coordinates.Count() - 1);
+
+            var route = string.Join(" --> ", coordinates);
+
+            Console.WriteLine(route);
         }
     }
 }
