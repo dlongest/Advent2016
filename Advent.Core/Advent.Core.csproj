@@ -53,6 +53,9 @@
     <Compile Include="Problem12\CPU.cs" />
     <Compile Include="Problem12\InstructionProcessor.cs" />
     <Compile Include="Problem13\Maze.cs" />
+    <Compile Include="Problem13\MazeCoordinate.cs" />
+    <Compile Include="Problem13\MazeNode.cs" />
+    <Compile Include="Problem13\Path.cs" />
     <Compile Include="Problem14\KeyGenerator.cs" />
     <Compile Include="Problem14\Md5Hash.cs" />
     <Compile Include="Problem14\StringExtensions.cs" />
