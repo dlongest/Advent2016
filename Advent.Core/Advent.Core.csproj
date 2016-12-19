@@ -63,6 +63,7 @@
     <Compile Include="Problem15\DiscFactory.cs" />
     <Compile Include="Problem15\TimeOptimizer.cs" />
     <Compile Include="Problem16\DiskFiller.cs" />
+    <Compile Include="Problem18\Traps.cs" />
     <Compile Include="Problem1\Coordinate.cs" />
     <Compile Include="Problem1\Gps.cs" />
     <Compile Include="Problem1\Turn.cs" />
