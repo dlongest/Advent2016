@@ -7,6 +7,7 @@ using Advent.Core.Problem14;
 using Advent.Core.Problem15;
 using Advent.Core.Problem16;
 using Advent.Core.Problem17;
+using Advent.Core.Problem19;
 using Advent.Core.Problem2;
 using Advent.Core.Problem3;
 using Advent.Core.Problem4;
@@ -28,7 +29,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem17();
+            Problems.Problem19();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -344,6 +345,11 @@ namespace Advent.Runner
             var actual = pathFinder.Find(passcode).MovesSoFar.Count();
 
             Console.WriteLine("Path Length = {0}", actual);
+        }
+
+        public static void Problem19()
+        {
+            Console.WriteLine("{0} Elves --> {1} Elf gets the presents", 3012210, PresentStealing.WhichSmartCircularElfGetsThePresents(3012210));
         }
     }
 

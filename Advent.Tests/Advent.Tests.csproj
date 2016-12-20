@@ -77,6 +77,8 @@
     <Compile Include="Problem17\PathTests.cs" />
     <Compile Include="Problem17\RoomTests.cs" />
     <Compile Include="Problem18\TrapsTests.cs" />
+    <Compile Include="Problem19\ListExtensionTests.cs" />
+    <Compile Include="Problem19\PresentStealingTests.cs" />
     <Compile Include="Problem1\CoordinateTests.cs" />
     <Compile Include="Problem1\GpsTests.cs" />
     <Compile Include="Problem2\BathroomCodeFinderTests.cs" />
