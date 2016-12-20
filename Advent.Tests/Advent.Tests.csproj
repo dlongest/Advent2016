@@ -73,6 +73,9 @@
     <Compile Include="Problem14\KeyFinderTests.cs" />
     <Compile Include="Problem15\DiscTests.cs" />
     <Compile Include="Problem16\DragonCurveTests.cs" />
+    <Compile Include="Problem17\PathFinderTests.cs" />
+    <Compile Include="Problem17\PathTests.cs" />
+    <Compile Include="Problem17\RoomTests.cs" />
     <Compile Include="Problem18\TrapsTests.cs" />
     <Compile Include="Problem1\CoordinateTests.cs" />
     <Compile Include="Problem1\GpsTests.cs" />

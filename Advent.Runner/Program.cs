@@ -6,6 +6,7 @@ using Advent.Core.Problem13;
 using Advent.Core.Problem14;
 using Advent.Core.Problem15;
 using Advent.Core.Problem16;
+using Advent.Core.Problem17;
 using Advent.Core.Problem2;
 using Advent.Core.Problem3;
 using Advent.Core.Problem4;
@@ -27,7 +28,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem13();
+            Problems.Problem17();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -332,6 +333,17 @@ namespace Advent.Runner
             var checksum = filler.Checksum("10001110011110000", 35651584);
 
             Console.WriteLine("Checksum = {0}", checksum);
+        }
+
+        public static void Problem17()
+        {
+            var passcode = "hhhxzeay";
+
+            var pathFinder = new ShortestPathFinder(new SquareShapedRoomsBuilder().Create());
+
+            var actual = pathFinder.Find(passcode).MovesSoFar.Count();
+
+            Console.WriteLine("Path Length = {0}", actual);
         }
     }
 

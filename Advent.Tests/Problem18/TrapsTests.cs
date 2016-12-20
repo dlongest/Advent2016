@@ -78,7 +78,9 @@ namespace Advent.Tests.Problem18
             Assert.Equal(38, actual);
         }
 
-        [Fact]
+        // This test runs correctly, but is very time-consuming.  And actually, the "test" is the
+        // live test case to submit, not an actual test.
+        //[Fact]
         public void ActualProblem()
         {
             var input = "^.^^^.^..^....^^....^^^^.^^.^...^^.^.^^.^^.^^..^.^...^.^..^.^^.^..^.....^^^.^.^^^..^^...^^^...^...^.";
