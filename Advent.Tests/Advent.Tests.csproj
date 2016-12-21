@@ -81,6 +81,8 @@
     <Compile Include="Problem19\PresentStealingTests.cs" />
     <Compile Include="Problem1\CoordinateTests.cs" />
     <Compile Include="Problem1\GpsTests.cs" />
+    <Compile Include="Problem20\IpRangeTests.cs" />
+    <Compile Include="Problem20\RangeTests.cs" />
     <Compile Include="Problem2\BathroomCodeFinderTests.cs" />
     <Compile Include="Problem2\KeypadBuilderTests.cs" />
     <Compile Include="Problem4\RoomNameTests.cs" />

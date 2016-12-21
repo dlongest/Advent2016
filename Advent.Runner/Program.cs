@@ -9,6 +9,7 @@ using Advent.Core.Problem16;
 using Advent.Core.Problem17;
 using Advent.Core.Problem19;
 using Advent.Core.Problem2;
+using Advent.Core.Problem20;
 using Advent.Core.Problem3;
 using Advent.Core.Problem4;
 using Advent.Core.Problem5;
@@ -29,7 +30,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem19();
+            Problems.Problem20();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -350,6 +351,23 @@ namespace Advent.Runner
         public static void Problem19()
         {
             Console.WriteLine("{0} Elves --> {1} Elf gets the presents", 3012210, PresentStealing.WhichSmartCircularElfGetsThePresents(3012210));
+        }
+
+        public static void Problem20()
+        {
+            var ips = new IpRanges();
+
+            foreach (var range in FileStringReader.Read("P20.txt"))
+            {
+                ips.Block(Range.From(range));
+            }
+
+            ips.AvailableRanges().ToList().ForEach(a => Console.WriteLine(string.Format("{0} == {1}", a, a.HowManyInRange)));
+
+            Console.WriteLine("\nLowest Available = {0}", ips.Lowest());
+            Console.WriteLine("Number Blocked = {0}", ips.HowManyBlocked);
+            Console.WriteLine("Number Available = {0}", ips.HowManyAvailable);
+            
         }
     }
 
