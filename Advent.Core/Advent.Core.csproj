@@ -50,6 +50,7 @@
     <Compile Include="Problem10\MoveChipInstruction.cs" />
     <Compile Include="Problem10\MoveChipInstructionBuilder.cs" />
     <Compile Include="Problem10\MoveChipsInstructionExecutor.cs" />
+    <Compile Include="Problem11\RadiationFacility.cs" />
     <Compile Include="Problem12\CPU.cs" />
     <Compile Include="Problem12\InstructionProcessor.cs" />
     <Compile Include="Problem13\Maze.cs" />
@@ -81,6 +82,16 @@
     <Compile Include="Problem1\TurnReader.cs" />
     <Compile Include="Problem20\IpRanges.cs" />
     <Compile Include="Problem20\Range.cs" />
+    <Compile Include="Problem21\InstructionReverser.cs" />
+    <Compile Include="Problem21\IScrambleRule.cs" />
+    <Compile Include="Problem21\MovePositionRule.cs" />
+    <Compile Include="Problem21\ReversePositionsRule.cs" />
+    <Compile Include="Problem21\RotateBasedOnLetterRule.cs" />
+    <Compile Include="Problem21\RotateStepsRule.cs" />
+    <Compile Include="Problem21\Scrambler.cs" />
+    <Compile Include="Problem21\ScrambleRuleBase.cs" />
+    <Compile Include="Problem21\SwapLettersRule.cs" />
+    <Compile Include="Problem21\SwapPositionsRule.cs" />
     <Compile Include="Problem2\BathroomCodeFinder.cs" />
     <Compile Include="Problem2\DiamondKeypadBuilder.cs" />
     <Compile Include="Problem2\InstructionReader.cs" />
@@ -116,9 +127,7 @@
     <Compile Include="Problem9\StringDecompressorV2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Problem11\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

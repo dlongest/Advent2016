@@ -10,6 +10,7 @@ using Advent.Core.Problem17;
 using Advent.Core.Problem19;
 using Advent.Core.Problem2;
 using Advent.Core.Problem20;
+using Advent.Core.Problem21;
 using Advent.Core.Problem3;
 using Advent.Core.Problem4;
 using Advent.Core.Problem5;
@@ -30,7 +31,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem20();
+            Problems.Problem21();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -369,10 +370,27 @@ namespace Advent.Runner
             Console.WriteLine("Number Available = {0}", ips.HowManyAvailable);
             
         }
+
+        public static void Problem21()
+        {
+            var instructions = FileStringReader.Read("P21.txt");
+            var reversedInstructions = instructions.Reverse();
+
+            var take = 3;
+            
+            var scrambler = new Scrambler();
+          
+            var scrambled = new Scrambler().Scramble("abcdefgh", instructions);
+
+            var descrambled = new Scrambler().Descramble("fbgdceah", instructions.Reverse());
+        }
     }
 
     public static class ArrayPrintExtensions
     {
+        
+
+
         public static string Format(this IEnumerable<int> values)
         {
             var s = string.Join("", values);
