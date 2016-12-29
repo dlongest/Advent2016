@@ -92,6 +92,8 @@
     <Compile Include="Problem21\ScrambleRuleBase.cs" />
     <Compile Include="Problem21\SwapLettersRule.cs" />
     <Compile Include="Problem21\SwapPositionsRule.cs" />
+    <Compile Include="Problem22\GridNode.cs" />
+    <Compile Include="Problem22\GridNodeFactory.cs" />
     <Compile Include="Problem2\BathroomCodeFinder.cs" />
     <Compile Include="Problem2\DiamondKeypadBuilder.cs" />
     <Compile Include="Problem2\InstructionReader.cs" />

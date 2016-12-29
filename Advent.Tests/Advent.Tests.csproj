@@ -85,6 +85,7 @@
     <Compile Include="Problem20\RangeTests.cs" />
     <Compile Include="Problem21\RuleTests.cs" />
     <Compile Include="Problem21\ScramblerTests.cs" />
+    <Compile Include="Problem22\GridNodeTests.cs" />
     <Compile Include="Problem2\BathroomCodeFinderTests.cs" />
     <Compile Include="Problem2\KeypadBuilderTests.cs" />
     <Compile Include="Problem4\RoomNameTests.cs" />

@@ -11,6 +11,7 @@ using Advent.Core.Problem19;
 using Advent.Core.Problem2;
 using Advent.Core.Problem20;
 using Advent.Core.Problem21;
+using Advent.Core.Problem22;
 using Advent.Core.Problem3;
 using Advent.Core.Problem4;
 using Advent.Core.Problem5;
@@ -31,7 +32,7 @@ namespace Advent.Runner
     {
         static void Main(string[] args)
         {
-            Problems.Problem21();
+            Problems.Problem22();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
@@ -383,6 +384,15 @@ namespace Advent.Runner
             var scrambled = new Scrambler().Scramble("abcdefgh", instructions);
 
             var descrambled = new Scrambler().Descramble("fbgdceah", instructions.Reverse());
+        }
+
+        public static void Problem22()
+        {
+            var nodes = new GridNodeFactory().Create(FileStringReader.Read("P22.txt").Skip(2));
+
+            var pairs = nodes.PairAll().WhereViable();
+
+            Console.WriteLine("Number Viable Pairs = {0}", pairs.Count());
         }
     }
 
